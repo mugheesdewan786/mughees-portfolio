@@ -1,0 +1,170 @@
+---
+import DiagramCredit from "./DiagramCredit.astro";
+import DiagramGov from "./DiagramGov.astro";
+import DiagramAI from "./DiagramAI.astro";
+---
+
+<section class="section" id="cases">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">03</span>
+      <div>
+        <h2>Three decisions that still pay rent</h2>
+        <p class="lede">Not a project list. Each one is a problem, the choice, and what it produced, with the caveats left in.</p>
+      </div>
+    </div>
+
+    <article class="case">
+      <div class="rail"><b>01</b> Crop credit</div>
+      <div>
+        <h3>Recovery you don’t have to chase</h3>
+        <p class="where">Waseela Global · 2025 – present</p>
+
+        <div class="beat">
+          <p class="beat-label">The problem</p>
+          <p>
+            Farmers in Punjab need input credit at sowing and have almost no formal credit history. Lenders avoid them for one reason: recovery. You disburse in spring and try to collect months later from someone whose entire annual income arrives as a single lump sum, often already spent by the time anyone comes asking. Every prior attempt treated repayment as a collections problem to be solved after the fact.
+          </p>
+        </div>
+
+        <div class="beat decision">
+          <p class="beat-label">The decision</p>
+          <p>
+            Stop chasing. Route the harvest sale through the same platform that issued the credit, and net the outstanding balance <strong>before</strong> the farmer is paid, so recovery becomes a property of the transaction rather than a function someone performs later.
+          </p>
+          <p>That only works if credit and procurement are one system rather than two integrated ones. It is the decision that drove the wider platform consolidation.</p>
+        </div>
+
+        <DiagramCredit />
+
+        <div class="beat">
+          <p class="beat-label">What it produced</p>
+          <p>
+            The design is also what unlocked institutional capital. Faysal Bank built a Shariah-compliant warehouse-receipt financing product on their side and integrated it with the electronic warehouse receipt system we built on ours: two systems, one reconciliation contract. I selected and negotiated the partner, designed the data flows and reconciliation logic between the two, sat with their agriculture, IT and Shariah teams, and ran both engineering teams through to launch. It went live in production and the first financing case completed on 5 July 2026. Approval and disbursement that had taken about seven days now complete the same day. For a bank, the attraction wasn’t the borrowers; it was that repayment sat inside the settlement path.
+          </p>
+        </div>
+
+        <div class="numbers">
+          <div class="num"><b>PKR 150M+</b><span>credit exposure</span></div>
+          <div class="num"><b>PKR 540M+</b><span>crop sales routed</span></div>
+          <div class="num"><b>45</b><span>farmers, first credit cohort</span></div>
+          <div class="num"><b>3,069</b><span>acres in Jhang and Chiniot</span></div>
+        </div>
+        <p class="cite">
+          The partnership was announced publicly in
+          <a href="https://www.dawn.com/news/1972643/faysal-bank-and-waseela-ink-mou-to-finance-farmers">Dawn</a>
+          on 12 February 2026, at MoU stage. Production go-live and the first case followed in July.
+        </p>
+        <p class="caveat">
+          Scope, stated plainly: the netting mechanism runs in production, and the first credit cohort was 45 farmers. Recovery for the current season is still in progress. The mechanism works in the flow; the final collected figure isn’t in yet. The 40,000+ figure elsewhere on this page is platform users, not borrowers.
+        </p>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="rail"><b>02</b> GovTech</div>
+      <div>
+        <h3>A regulator, off paper</h3>
+        <p class="where">Pakistan Medical Commission · 2021 – 2023 · team of 25</p>
+
+        <div class="beat">
+          <p class="beat-label">The problem</p>
+          <p>
+            Pakistan’s federal regulator of medical and dental education licensed practitioners on paper. A national register of over a quarter of a million practitioners, examinations for hundreds of thousands of students, admissions run separately by 97 colleges each with its own process, and complaints that took weeks to resolve. Payments arrived as bank slips reconciled by hand. I was the business analyst, given the acting manager role over a 25-person team across engineering, QA, design and operations.
+          </p>
+        </div>
+
+        <div class="beat decision">
+          <p class="beat-label">The decision</p>
+          <p>
+            Sequence by consequence, not by convenience. Licensing went first, because a doctor who cannot renew cannot legally practise, so that queue was the one where delay did real harm.
+          </p>
+          <p>
+            And integrate the payment rails in the <strong>same</strong> release rather than a later phase. Manual bank-slip reconciliation was the single biggest failure point in the paper process; digitising the form around it would have moved the bottleneck, not removed it.
+          </p>
+          <p>
+            The floor had to come with us. Long-serving staff knew the undocumented exceptions and were not going to run a system designed over their heads. I sat with operators for weeks, learned the work they actually did, and folded that into the workflow before we asked them to leave the paper bags behind.
+          </p>
+        </div>
+
+        <DiagramGov />
+
+        <div class="beat">
+          <p class="beat-label">What it produced</p>
+          <p>
+            Pakistan’s first digital medical licensing and examination infrastructure: online licensing at national scale, the country’s first centralised medical admissions portal, credentialing across 128 private medical and dental colleges, MCB payment and challan collection integrated into the licensing flow, and a central complaints system. Doctors apply and pay from home. Cases that sat more than a month now clear in under three days, many the same day. Physical visits fell by about 95%. A paper backlog of more than 40,000 applications was worked through rather than left in bags. Two hundred thousand practitioners now transact with their regulator directly, with no counter and no intermediary. Audit trails were a first-sprint constraint, not a retrofit before a review.
+          </p>
+        </div>
+
+        <div class="numbers">
+          <div class="num"><b>200,000+</b><span>doctors licensed online</span></div>
+          <div class="num"><b>Month → &lt;3 days</b><span>licensing turnaround</span></div>
+          <div class="num"><b>~95%</b><span>fewer physical visits</span></div>
+          <div class="num"><b>97</b><span>colleges in the admissions portal</span></div>
+        </div>
+        <p class="caveat">
+          A later vendor-built licensing v2 failed because it was designed from documents, not from the floor. The first version worked because the operators stayed in the room. Documentation is necessary; it is not a substitute for watching the process.
+        </p>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="rail"><b>03</b> AI in practice</div>
+      <div>
+        <h3>Where AI earns its place</h3>
+        <p class="where">Product operating model · Waseela Global · 2025 – present</p>
+
+        <div class="beat">
+          <p class="beat-label">The problem</p>
+          <p>
+            Thirteen systems, one to three engineers. The constraint was never ideas. It was throughput. Specification was the bottleneck: business requirement cycles ran into weeks, which meant the roadmap was governed by how fast documents could be written rather than by what mattered most.
+          </p>
+        </div>
+
+        <div class="beat decision">
+          <p class="beat-label">The decision</p>
+          <p>Put AI where the bottleneck is repetitive judgement at volume, and deliberately keep it out of decisions where a wrong answer is expensive.</p>
+          <p>
+            So: generate PRDs from live codebases, analyse requirements from screenshots, reuse design-system prompts, and put an AI access layer over our ERP so every product manager can query the system directly instead of queueing for a report. The farm-management product uses a knowledge engine checked by Waseela’s agricultural-science team, not a free-roaming model. And <strong>not</strong> in the credit decision. A model being confidently wrong there costs a farmer a season.
+          </p>
+        </div>
+
+        <DiagramAI />
+
+        <div class="beat">
+          <p class="beat-label">What it produced</p>
+          <p>
+            Specification cycles fell from weeks to days, and the practice was adopted across the product team rather than staying a personal habit. It also changed what one person could ship: I built and deployed four internal products myself with no engineering allocation, our electronic warehouse receipt system (the one the Faysal Bank product integrates with), an AI-enabled farm management system, a laboratory dashboard and an executive dashboard. All are in production.
+          </p>
+        </div>
+
+        <div class="numbers">
+          <div class="num"><b>Weeks → days</b><span>specification cycles</span></div>
+          <div class="num"><b>4</b><span>products built solo</span></div>
+          <div class="num"><b>13</b><span>systems owned</span></div>
+          <div class="num"><b>1–3</b><span>engineers</span></div>
+        </div>
+        <p class="caveat">To be precise about the claim: I build <em>with</em> AI tools and I’ve made them part of how a team works. I haven’t owned an ML product or a model.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<script>
+  const diagrams = document.querySelectorAll(".diagram");
+  const io = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-on");
+          io.unobserve(entry.target);
+        }
+      }
+    },
+    { threshold: 0.28 }
+  );
+  diagrams.forEach((el) => {
+    el.classList.add("js");
+    io.observe(el);
+  });
+</script>

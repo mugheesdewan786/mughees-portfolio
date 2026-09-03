@@ -1,0 +1,52 @@
+<figure class="diagram">
+  <svg viewBox="0 0 758 232" role="img" aria-label="Two release sequences compared. In the conventional plan, forms are digitised first and payment rails deferred. In the chosen plan, licensing and payment rails ship in the same release.">
+    <defs>
+      <marker id="bh" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M 0 1 L 9 5 L 0 9 z" fill="currentColor"></path>
+      </marker>
+      <marker id="bha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M 0 1 L 9 5 L 0 9 z" fill="var(--lapis)"></path>
+      </marker>
+    </defs>
+    <text x="0" y="12" class="dlabel" fill="currentColor" opacity=".65">Conventional sequence</text>
+    <g class="d-step" style="--i:0">
+      <rect x="0" y="24" width="150" height="42" rx="6" fill="none" stroke="currentColor" stroke-width="1"></rect>
+      <text x="75" y="50" font-size="12" text-anchor="middle" fill="currentColor">Digitise forms</text>
+    </g>
+    <g class="d-step" style="--i:1">
+      <rect x="184" y="24" width="150" height="42" rx="6" fill="none" stroke="currentColor" stroke-width="1"></rect>
+      <text x="259" y="50" font-size="12" text-anchor="middle" fill="currentColor">Admissions</text>
+    </g>
+    <g class="d-step" style="--i:2">
+      <rect x="368" y="24" width="180" height="42" rx="6" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3" opacity=".6"></rect>
+      <text x="458" y="44" font-size="12" text-anchor="middle" fill="currentColor" opacity=".75">Payment rails</text>
+      <text x="458" y="58" font-size="12" text-anchor="middle" fill="currentColor" opacity=".75">later phase</text>
+    </g>
+    <line class="d-flow" x1="150" y1="45" x2="180" y2="45" stroke="currentColor" stroke-width="1.4" marker-end="url(#bh)"></line>
+    <line class="d-flow" x1="334" y1="45" x2="364" y2="45" stroke="currentColor" stroke-width="1.4" marker-end="url(#bh)"></line>
+    <path class="d-flow d-flow-weak" d="M 75 66 L 75 88 L 259 88" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".5"></path>
+    <path d="M 259 66 L 259 88" fill="none" stroke="currentColor" stroke-width="1" opacity=".5"></path>
+    <text x="290" y="92" font-size="11.5" fill="currentColor" opacity=".7">manual bank-slip reconciliation still behind every form</text>
+    <line x1="0" y1="118" x2="758" y2="118" stroke="currentColor" stroke-width="1" opacity=".18"></line>
+    <text x="0" y="144" class="dlabel" fill="var(--lapis)">What we shipped</text>
+    <g class="d-step d-key" style="--i:3">
+      <rect x="0" y="156" width="222" height="42" rx="6" fill="var(--lapis)" stroke="var(--lapis)" stroke-width="1"></rect>
+      <text x="111" y="176" font-size="12" text-anchor="middle" fill="var(--paper)" font-weight="500">Licensing + payment rails</text>
+      <text x="111" y="190" font-size="11" text-anchor="middle" fill="var(--paper)" opacity=".85">one release</text>
+    </g>
+    <g class="d-step" style="--i:4">
+      <rect x="256" y="156" width="150" height="42" rx="6" fill="none" stroke="currentColor" stroke-width="1"></rect>
+      <text x="331" y="181" font-size="12" text-anchor="middle" fill="currentColor">Admissions</text>
+    </g>
+    <g class="d-step" style="--i:5">
+      <rect x="440" y="156" width="150" height="42" rx="6" fill="none" stroke="currentColor" stroke-width="1"></rect>
+      <text x="515" y="181" font-size="12" text-anchor="middle" fill="currentColor">Credentialing</text>
+    </g>
+    <line class="d-flow d-flow-key" x1="222" y1="177" x2="252" y2="177" stroke="var(--lapis)" stroke-width="2" marker-end="url(#bha)"></line>
+    <line class="d-flow" x1="406" y1="177" x2="436" y2="177" stroke="currentColor" stroke-width="1.4" marker-end="url(#bh)"></line>
+    <text x="0" y="222" font-size="11.5" fill="var(--lapis)">reconciliation removed, not relocated. 200,000+ practitioners self-serving</text>
+  </svg>
+  <figcaption>
+    Both plans digitise the same three domains. Deferring the payment rails leaves the paper bottleneck intact behind a digital form; shipping them together is what let practitioners actually self-serve.
+  </figcaption>
+</figure>
