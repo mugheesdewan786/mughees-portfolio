@@ -2,6 +2,6 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://mugheesdewan.com',
+  site: 'https://mughees-portfolio-chi.vercel.app',
   compressHTML: true,
 });

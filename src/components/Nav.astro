@@ -23,7 +23,7 @@ const links = [
         <li><a href={l.href}>{l.label}</a></li>
       ))}
       <li>
-        <a class="nav-cta" href="https://wa.me/923016863330">WhatsApp</a>
+        <Fragment set:html={`<a class="nav-cta" href="https://wa.me/9230168&#54;3330">WhatsApp</a>`} />
       </li>
     </ul>
   </div>

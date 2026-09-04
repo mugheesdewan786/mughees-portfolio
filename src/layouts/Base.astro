@@ -12,8 +12,6 @@ const jsonLd = JSON.stringify({
   name: "Mughees Dewan",
   jobTitle: "Product Manager",
   address: { "@type": "PostalAddress", addressLocality: "Lahore", addressCountry: "PK" },
-  email: "mailto:mugheesdewan@outlook.com",
-  telephone: "+923016863330",
   url: canonical,
   sameAs: ["https://linkedin.com/in/mugheesdewan"],
 });
@@ -30,8 +28,10 @@ const jsonLd = JSON.stringify({
     <link rel="canonical" href={canonical} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
