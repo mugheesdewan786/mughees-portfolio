@@ -2,6 +2,7 @@
 import DiagramCredit from "./DiagramCredit.astro";
 import DiagramGov from "./DiagramGov.astro";
 import DiagramAI from "./DiagramAI.astro";
+import DiagramMilk from "./DiagramMilk.astro";
 ---
 
 <section class="section" id="cases">
@@ -9,7 +10,7 @@ import DiagramAI from "./DiagramAI.astro";
     <div class="section-head">
       <span class="kicker">03</span>
       <div>
-        <h2>Three decisions, and what they produced</h2>
+        <h2>Four decisions, and what they produced</h2>
         <p class="lede">Each one is a problem, the decision I made, and the result. Caveats included.</p>
       </div>
     </div>
@@ -19,6 +20,7 @@ import DiagramAI from "./DiagramAI.astro";
       <div>
         <h3>Recovery you don’t have to chase</h3>
         <p class="where">Waseela Global · 2025 – present</p>
+        <p class="claim">PKR 150M+ deployed with repayment netted at settlement — and a bank built a financing product on top of it.</p>
 
         <div class="beat">
           <p class="beat-label">The problem</p>
@@ -66,6 +68,7 @@ import DiagramAI from "./DiagramAI.astro";
       <div>
         <h3>Taking a regulator off paper</h3>
         <p class="where">Pakistan Medical Commission · 2021 – 2023 · team of 25</p>
+        <p class="claim">200,000+ practitioners off paper, licensing from over a month to under three days, payment rails in the same release.</p>
 
         <div class="beat">
           <p class="beat-label">The problem</p>
@@ -113,6 +116,7 @@ import DiagramAI from "./DiagramAI.astro";
       <div>
         <h3>Where AI earns its place</h3>
         <p class="where">Product operating model · Waseela Global · 2025 – present</p>
+        <p class="claim">Specification cycles from weeks to days and four production systems built solo — with AI kept out of the credit decision.</p>
 
         <div class="beat">
           <p class="beat-label">The problem</p>
@@ -145,6 +149,51 @@ import DiagramAI from "./DiagramAI.astro";
           <div class="num"><b>1–3</b><span>engineers</span></div>
         </div>
         <p class="caveat">To be precise about the claim: I build <em>with</em> AI tools and I’ve made them part of how a team works. I haven’t owned an ML product or a model.</p>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="rail"><b>04</b> Field capture</div>
+      <div>
+        <h3>Taking the choice away from the operator</h3>
+        <p class="where">Waseela Global · 2025 – present</p>
+        <p class="claim">Field teams stopped bypassing the system once scanning a coded bottle chose the screen for them.</p>
+
+        <div class="beat">
+          <p class="beat-label">The problem</p>
+          <p>
+            Milk collection ran on paper diaries, and field teams were quietly bypassing the system that was supposed to replace them. Not out of objection: entry was slow, collection points had no reliable connectivity, and every single reading began with the operator choosing what kind of reading it was. There was also no hardware budget, so whatever replaced the diary had to run on the phones staff already carried.
+          </p>
+        </div>
+
+        <div class="beat decision">
+          <p class="beat-label">The decision</p>
+          <p>
+            Make the object being measured choose the screen. A reusable coded bottle and a coded butyrometer each resolve to exactly one flow, so an agent or officer never selects an entry type — they scan, and the right screen is already open.
+          </p>
+          <p>
+            Two further choices moved out of human hands at the same time. Quality checks fire at <strong>random</strong> rather than when someone asks for one, and every fat reading is bound to the tester who ran it. Collection then reconciles against litres actually sold, not against what the diary says was collected.
+          </p>
+        </div>
+
+        <DiagramMilk />
+
+        <div class="beat">
+          <p class="beat-label">What it produced</p>
+          <p>
+            The flow is live, running on staff’s own phones with no hardware spend. The selection step is gone, quality checks are no longer requested by the person they assess, and the collection figure finally has something independent to be checked against. The design principle is the same one behind the credit work: if a control depends on someone choosing to apply it, it is not a control.
+          </p>
+        </div>
+
+        <div class="numbers">
+          <div class="num"><b>PKR 0</b><span>hardware budget</span></div>
+          <div class="num"><b>Live</b><span>in production</span></div>
+          <div class="num"><b>Random</b><span>quality-check trigger</span></div>
+          <div class="num"><b>1 scan</b><span>replaces the entry-type choice</span></div>
+        </div>
+        <p class="caveat">
+          Stated plainly: this one is live but not yet measured. I do not have a clean before-and-after on the share of collection captured digitally, or on the variance between litres recorded and litres sold. Those are the two numbers worth asking me for in a few months — and they are the ones I would hold myself to.
+        </p>
       </div>
     </article>
   </div>
