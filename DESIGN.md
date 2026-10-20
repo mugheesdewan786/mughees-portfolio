@@ -26,6 +26,26 @@ Space Grotesk for headings, Inter for body. Same pairing as the reference site t
 
 Hero portrait is a 400px circle with an indigo–violet–amber ring and a slow float. Closing portrait is also circular. No full-bleed split panels.
 
+## Dark mode
+
+Not implemented. `global.css` has no `prefers-color-scheme` block and no `[data-theme]` stamps,
+so the page renders light on every device. Known gap, not a decision.
+
+---
+
+# Appendix: unshipped direction — "gazette"
+
+**Nothing below this line is in the code.** It is a second, more distinctive design system that was
+specified and never built: OKLCH neutrals tinted toward hue 262, Source Serif 4 for display and
+Schibsted Grotesk for body, a full-bleed split hero on a lapis panel, cases on a numbered rail
+instead of cards.
+
+The site currently ships the system above it: Space Grotesk + Inter, indigo/violet, rounded white
+cards on a grey ground. The two are incompatible — the gazette section explicitly lists Space Grotesk
+and Inter as rejected, and the shipped site loads exactly those two.
+
+Keep this as a brief for a future redesign. Do not read it as documentation of the live site.
+
 ## Colors (OKLCH)
 
 | Role | Token | Value |
